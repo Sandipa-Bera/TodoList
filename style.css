@@ -1,0 +1,102 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #2c3e50;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Form styles */
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+#task-form input, #task-form select, #task-form button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#task-form button {
+    background: #3498db;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+#task-form button:hover {
+    background: #2980b9;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+.filters input, .filters select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+    padding: 0;
+    max-width: 650px;
+    margin: 0 auto;
+}
+.task {
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Priority colors */
+.task.low { border-left: 6px solid #2ecc71; }
+.task.medium { border-left: 6px solid #f1c40f; }
+.task.high { border-left: 6px solid #e74c3c; }
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.task-tags {
+    font-size: 13px;
+    color: #777;
+}
+small {
+    color: #999;
+}
+
+button { cursor: pointer; background: transparent; border: none; font-size: 18px; }
+button:hover { transform: scale(1.2); color: #e74c3c; transition: 0.2s; }
